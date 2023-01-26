@@ -3,3 +3,5 @@ touch
 git 
 maven
 tomcat
+jenkins 
+sonarqube
