@@ -29,9 +29,9 @@ pipeline{
                             type: 'war'
                        ]
                   ], 
-                  credentialsId: 'nexus3', 
+                  credentialsId: 'thanuja', 
                   groupId: 'in.javahome', 
-                  nexusUrl: '172.31.47.71:8081', 
+                  nexusUrl: '172.31.38.198:8081', 
                   nexusVersion: 'nexus3', 
                   protocol: 'http', 
                   repository: 'sample-release', 
