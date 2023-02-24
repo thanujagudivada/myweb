@@ -40,17 +40,17 @@ pipeline{
             }
         stage('Build Docker Image'){
             steps{
-                 sh 'docker build -t thanujagudivada/uat .'
+                 sh 'docker build -t suresh1817/uat .'
                  sh 'docker build -t tomcat:${BUILD_NUMBER} .'
-                 sh 'docker run -itd --name rahul -p 2019:8080 tomcat:${BUILD_NUMBER}'
+                 sh 'docker run -itd --name rahu -p 2013:8080 tomcat:${BUILD_NUMBER}'
              }
          }
         stage('Push Docker Image'){
              steps{
                   withCredentials([string(credentialsId: 'docker', variable: 'docker')]) {
-                      sh "docker login -u thanujagudivada -p ${docker}"
+                      sh "docker login -u suresh1817 -p ${docker}"
             }
-            sh 'docker push thanujagudivada/uat'
+            sh 'docker push suresh1817/uat'
         }
       }
         
